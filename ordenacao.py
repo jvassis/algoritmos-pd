@@ -1,4 +1,4 @@
-def quickSort(vetor):
+def quicksort(vetor):
     if len(vetor) < 2: return vetor
     pivot = vetor[0]
     menores, maiores = [], []
@@ -7,5 +7,4 @@ def quickSort(vetor):
             menores.append(elemento)
         else:
             maiores.append(elemento)
-    return quickSort(menores) + [pivot] + quickSort(maiores)
-    
+    return quicksort(menores) + [pivot] + quicksort(maiores)
